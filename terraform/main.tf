@@ -1,15 +1,14 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">=4.48.0"
+    }
+  }
+  required_version = ">= 1.3.7"
+}
 
-# terraform {
-#   required_providers {
-#     aws = {
-#       source  = "hashicorp/aws"
-#       version = ">=4.48.0"
-#     }
-#   }
-#   required_version = ">= 1.3.7"
-# }
-
-# Remote backend
+# Remote backend (For Best Practice)
 # resource "aws_s3_bucket" "backend_bucket" {
 #   bucket = var.remote_bucket_name
 
